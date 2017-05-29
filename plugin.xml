@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            commandId="adt.commands.ADTLaunch"
+            class="adt.handlers.LaunchADT">
+      </handler>
+   </extension>
+   <extension
+   		point="org.eclipse.ui.handlers">
+   		<handler
+            commandId="adt.commands.ADTConfigure"
+            class="adt.handlers.ADTConfigure">
+      	</handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="adt.commands.ADTLaunch"
+            contextId="org.eclipse.ui.contexts.window"
+           >
+      </key>
+   </extension>
+   <extension
+	point="org.eclipse.ui.bindings">
+	<key
+            commandId="adt.commands.ADTConfigure"
+            contextId="org.eclipse.ui.contexts.window"
+           >
+      </key>
+   </extension>
+
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="ADT Menu"
+               mnemonic="M"
+               id="adt.menus.ADTMenu">
+            <command
+                  commandId="adt.commands.ADTLaunch"
+                  label="ADT Launch"
+                  mnemonic="L"
+                  id="adt.commands.ADTLaunch">
+            </command>
+          </menu>
+       </menuContribution>
+        <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="ADT Menu"
+               mnemonic="M"
+               id="adt.menus.ADTMenu">
+            <command
+                  commandId="adt.commands.ADTConfigure"
+                  label="ADT Configure"
+                  mnemonic="C"
+                  id="adt.commands.ADTConfigure">
+            </command>
+          </menu>
+       </menuContribution>
+   </extension>
+
+</plugin>
