@@ -2,8 +2,6 @@ package adt;
 
 import org.eclipse.jface.dialogs.IMessageProvider;
 import org.eclipse.jface.dialogs.TitleAreaDialog;
-import org.eclipse.jface.viewers.LabelProvider;
-import org.eclipse.jface.window.Window;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -12,18 +10,15 @@ import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
-import org.eclipse.ui.dialogs.ElementListSelectionDialog;
 
 public class NewSuperCategoryDialog extends TitleAreaDialog {
 
     private Text txtFirstName;
     private Text lastNameText;
-    private Text lfname;
-
+   
     private String firstName;
     private String lastName;
-    private String lfTextName;
-
+    
     public NewSuperCategoryDialog(Shell parentShell) {
         super(parentShell);
     }
