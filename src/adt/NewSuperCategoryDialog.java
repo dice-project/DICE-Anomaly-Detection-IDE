@@ -26,8 +26,8 @@ public class NewSuperCategoryDialog extends TitleAreaDialog {
     @Override
     public void create() {
         super.create();
-        setTitle("This is my first custom dialog");
-        setMessage("This is a TitleAreaDialog", IMessageProvider.INFORMATION);
+        setTitle("DICE Anomaly Detection Configuration");
+        setMessage("This form allows guided configuration for the Anomaly Detection Tool", IMessageProvider.INFORMATION);
     }
 
     @Override
@@ -49,7 +49,7 @@ public class NewSuperCategoryDialog extends TitleAreaDialog {
 
     private void createFirstName(Composite container) {
         Label lbtFirstName = new Label(container, SWT.NONE);
-        lbtFirstName.setText("First Name");
+        lbtFirstName.setText("First Option");
 
         GridData dataFirstName = new GridData();
         dataFirstName.grabExcessHorizontalSpace = true;
@@ -61,7 +61,7 @@ public class NewSuperCategoryDialog extends TitleAreaDialog {
 
     private void createLastName(Composite container) {
         Label lbtLastName = new Label(container, SWT.NONE);
-        lbtLastName.setText("Last Name");
+        lbtLastName.setText("Option Name");
 
         GridData dataLastName = new GridData();
         dataLastName.grabExcessHorizontalSpace = true;
