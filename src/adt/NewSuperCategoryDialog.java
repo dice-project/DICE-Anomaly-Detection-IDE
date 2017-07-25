@@ -11,13 +11,17 @@ import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
+
 public class NewSuperCategoryDialog extends TitleAreaDialog {
 
-    private Text txtFirstName;
-    private Text lastNameText;
+    private Text configurationFile;
+    private Text commandArguments;
    
-    private String firstName;
-    private String lastName;
+    /**
+     * Nasty trick to transmit command line arguments and configuration file from one menu to the other
+     * */
+    public static String confFile = "conf.ini";
+    public static String cmdArgs = "";
     
     public NewSuperCategoryDialog(Shell parentShell) {
         super(parentShell);
@@ -38,37 +42,35 @@ public class NewSuperCategoryDialog extends TitleAreaDialog {
         GridLayout layout = new GridLayout(2, false);
         container.setLayout(layout);
 
-        createFirstName(container);
-        createLastName(container);
-        createLastName(container);
-        createLastName(container);
-        createLastName(container);
+        configurationFileLocation(container);
+        commandLineArguments(container);
+        
   
         return area;
     }
 
-    private void createFirstName(Composite container) {
+    private void configurationFileLocation(Composite container) {
         Label lbtFirstName = new Label(container, SWT.NONE);
-        lbtFirstName.setText("First Option");
+        lbtFirstName.setText("Configuration File Path");
 
-        GridData dataFirstName = new GridData();
-        dataFirstName.grabExcessHorizontalSpace = true;
-        dataFirstName.horizontalAlignment = GridData.FILL;
+        GridData dataText = new GridData();
+        dataText.grabExcessHorizontalSpace = true;
+        dataText.horizontalAlignment = GridData.FILL;
 
-        txtFirstName = new Text(container, SWT.BORDER);
-        txtFirstName.setLayoutData(dataFirstName);
+        configurationFile = new Text(container, SWT.BORDER);
+        configurationFile.setLayoutData(dataText);
     }
 
-    private void createLastName(Composite container) {
+    private void commandLineArguments(Composite container) {
         Label lbtLastName = new Label(container, SWT.NONE);
-        lbtLastName.setText("Option Name");
+        lbtLastName.setText("Command line options");
 
-        GridData dataLastName = new GridData();
-        dataLastName.grabExcessHorizontalSpace = true;
-        dataLastName.horizontalAlignment = GridData.FILL;
+        GridData dataText = new GridData();
+        dataText.grabExcessHorizontalSpace = true;
+        dataText.horizontalAlignment = GridData.FILL;
         
-        lastNameText = new Text(container, SWT.BORDER);
-        lastNameText.setLayoutData(dataLastName);
+        commandArguments = new Text(container, SWT.BORDER);
+        commandArguments.setLayoutData(dataText);
     }
 
  
@@ -81,8 +83,8 @@ public class NewSuperCategoryDialog extends TitleAreaDialog {
     // save content of the Text fields because they get disposed
     // as soon as the Dialog closes
     private void saveInput() {
-        firstName = txtFirstName.getText();
-        lastName = lastNameText.getText();
+        confFile = configurationFile.getText();
+        cmdArgs = commandArguments.getText();
 
     }
 
@@ -92,11 +94,11 @@ public class NewSuperCategoryDialog extends TitleAreaDialog {
         super.okPressed();
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getConfigurationFile() {
+        return confFile;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getCommandLineArguments() {
+        return cmdArgs;
     }
 }

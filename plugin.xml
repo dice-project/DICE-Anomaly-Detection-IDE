@@ -18,7 +18,7 @@
    <extension
          point="org.eclipse.ui.bindings">
       <key
-            commandId="adt.commands.ADTLaunch"
+            commandId="adt.commands.LaunchADT"
             contextId="org.eclipse.ui.contexts.window"
            >
       </key>
@@ -37,21 +37,21 @@
       <menuContribution
             locationURI="menu:org.eclipse.ui.main.menu">
          <menu
-               label="ADT Menu"
+               label="DICE Tools"
                mnemonic="M"
                id="adt.menus.ADTMenu">
             <command
-                  commandId="adt.commands.ADTLaunch"
+                  commandId="adt.commands.LaunchADT"
                   label="ADT Launch"
                   mnemonic="L"
-                  id="adt.commands.ADTLaunch">
+                  id="adt.commands.LaunchADT">
             </command>
           </menu>
        </menuContribution>
         <menuContribution
             locationURI="menu:org.eclipse.ui.main.menu">
          <menu
-               label="ADT Menu"
+               label="DICE Tools"
                mnemonic="M"
                id="adt.menus.ADTMenu">
             <command
@@ -60,6 +60,7 @@
                   mnemonic="C"
                   id="adt.commands.ADTConfigure">
             </command>
+            
           </menu>
        </menuContribution>
    </extension>

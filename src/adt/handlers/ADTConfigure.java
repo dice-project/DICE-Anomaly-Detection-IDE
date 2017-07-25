@@ -21,21 +21,13 @@ public class ADTConfigure extends AbstractHandler{
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindowChecked(event);
-		/*
-		MessageDialog.openInformation(
-				window.getShell(),
-				"Titlu",
-				"Configured ADT");
-		
-		
-		*/
-		
+	
 		NewSuperCategoryDialog dialog = new NewSuperCategoryDialog(window.getShell());
 		dialog.create();
 		
 		if (dialog.open() == Window.OK){
-			System.out.println(dialog.getFirstName());
-			System.out.println(dialog.getLastName());
+			System.err.println(dialog.getConfigurationFile());
+			System.err.println(dialog.getCommandLineArguments());
 		}
 		
 		return null;

@@ -26,13 +26,18 @@ public class LaunchADT extends AbstractHandler {
 	
 		MessageDialog.openInformation(
 				window.getShell(),
-				"Adt",
-				"Launched -- Dice Anomaly Detection");
+				"Anomaly Detecton Message",
+				"You just launched the Dice Anomaly Detection Tool using the configured parameters");
 		
 		try {
 		
 			String line;
-			Process p = Runtime.getRuntime().exec("python /Users/ioan/Documents/workspace/adt/src/adt/script.py");
+			
+			String arguments = "-f "+adt.NewSuperCategoryDialog.confFile+" "+adt.NewSuperCategoryDialog.cmdArgs;
+			/*
+			 * Change path for the anomaly detection script so that it can be used in the DICE IDE
+			 * */
+			Process p = Runtime.getRuntime().exec("python /Users/ioan/Documents/workspace/adt/src/adt/script.py "+arguments);
 			p.waitFor();
 			BufferedReader input = new BufferedReader(new InputStreamReader(p.getInputStream()));
 			while((line=input.readLine())!=null){
