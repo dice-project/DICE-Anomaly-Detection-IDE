@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Adt
-Bundle-SymbolicName: adt;singleton:=true
+Bundle-Name: Anomaly Detection Tool Plugin
+Bundle-SymbolicName: ro.ieat.dice.adt;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: adt.Activator
+Bundle-Activator: ro.ieat.dice.adt.adt.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

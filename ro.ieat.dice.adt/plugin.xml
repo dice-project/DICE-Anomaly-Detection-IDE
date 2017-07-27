@@ -5,37 +5,33 @@
          point="org.eclipse.ui.handlers">
       <handler
             commandId="adt.commands.LaunchADT"
-            class="adt.handlers.LaunchADT">
+            class="ro.ieat.dice.adt.adt.handlers.LaunchADT">
       </handler>
-   </extension>
-   <extension
-   		point="org.eclipse.ui.handlers">
-   		<handler
-            commandId="adt.commands.ADTConfigure"
-            class="adt.handlers.ADTConfigure">
-      	</handler>
+      <handler
+            class="ro.ieat.dice.adt.adt.handlers.ADTConfigure"
+            commandId="adt.commands.ADTConfigure">
+      </handler>
    </extension>
    <extension
          point="org.eclipse.ui.bindings">
       <key
             commandId="adt.commands.LaunchADT"
             contextId="org.eclipse.ui.contexts.window"
-           >
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+L">
       </key>
-   </extension>
-   <extension
-	point="org.eclipse.ui.bindings">
-	<key
+      <key
             commandId="adt.commands.ADTConfigure"
             contextId="org.eclipse.ui.contexts.window"
-           >
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="CTRL+M">
       </key>
    </extension>
 
    <extension
          point="org.eclipse.ui.menus">
       <menuContribution
-            locationURI="menu:org.eclipse.ui.main.menu">
+            locationURI="menu:org.dice.menu.tools">
          <menu
                label="DICE Tools"
                mnemonic="M"
@@ -46,21 +42,12 @@
                   mnemonic="L"
                   id="adt.commands.LaunchADT">
             </command>
-          </menu>
-       </menuContribution>
-        <menuContribution
-            locationURI="menu:org.eclipse.ui.main.menu">
-         <menu
-               label="DICE Tools"
-               mnemonic="M"
-               id="adt.menus.ADTMenu">
             <command
                   commandId="adt.commands.ADTConfigure"
+                  id="adt.commands.ADTConfigure"
                   label="ADT Configure"
-                  mnemonic="C"
-                  id="adt.commands.ADTConfigure">
+                  mnemonic="C">
             </command>
-            
           </menu>
        </menuContribution>
    </extension>
