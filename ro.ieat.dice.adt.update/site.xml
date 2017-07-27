@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<site>
-   <feature url="features/ro.ieat.dice.adt.feature_1.0.0.qualifier.jar" id="ro.ieat.dice.adt.feature" version="1.0.0.qualifier">
-      <category name="ro.ieat.dice.adt.category"/>
-   </feature>
-   <category-def name="ro.ieat.dice.adt.category" label="Anomaly Detection"/>
-</site>
