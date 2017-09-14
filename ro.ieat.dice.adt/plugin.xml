@@ -33,7 +33,7 @@
       <menuContribution
             locationURI="menu:org.dice.menu.tools">
          <menu
-               label="DICE Tools"
+               label="DICE Anomaly Detection"
                mnemonic="M"
                id="adt.menus.ADTMenu">
             <command
