@@ -20,7 +20,7 @@ public class NewSuperCategoryDialog extends TitleAreaDialog {
 	 * Nasty trick to transmit command line arguments and configuration file
 	 * from one menu to the other
 	 */
-	public static String confFile = "conf.ini";
+	public static String confFile = "../DICE-Anomaly-Detection-Tool/dmonadp.ini";
 	public static String cmdArgs = "";
 
 	public NewSuperCategoryDialog(Shell parentShell) {
