@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/ro.ieat.dice.adt.feature_1.0.0.201709191106.jar" id="ro.ieat.dice.adt.feature" version="1.0.0.201709191106">
+   <feature url="features/ro.ieat.dice.adt.feature_1.0.0.201710021435.jar" id="ro.ieat.dice.adt.feature" version="1.0.0.201710021435">
       <category name="ro.ieat.dice.adt.category"/>
    </feature>
    <category-def name="ro.ieat.dice.adt.category" label="Anomaly Detection"/>
