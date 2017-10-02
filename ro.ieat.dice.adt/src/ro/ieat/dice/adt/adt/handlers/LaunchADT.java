@@ -40,7 +40,7 @@ public class LaunchADT extends AbstractHandler {
 			 * used in the DICE IDE
 			 */
 			Bundle bundle = Platform.getBundle(Activator.PLUGIN_ID);
-			URL fileUrl = bundle.getEntry("script.py");
+			URL fileUrl = bundle.getEntry("../DICE-Anomaly-Detection-Tool/dmonadp.py");
 			URI fileUri = FileLocator.resolve(fileUrl).toURI();
 			File file = new File(fileUri);
 
